@@ -1,3 +1,4 @@
+<h3>Arithmetic Operator Overloading</h3>
 <table border="0"><tbody><tr><th>Operator</th>
 				<th>Expression</th>
 				<th>Internally</th>
@@ -41,3 +42,27 @@
 				<td><code>~p1</code></td>
 				<td><code>p1.__invert__()</code></td>
 			</tr></tbody></table>
+<h3>Comparisan Operator Overloading</h3>
+<table border="0"><tbody><tr><th>Operator</th>
+				<th>Expression</th>
+				<th>Internally</th>
+			</tr><tr><td>Less than</td>
+				<td><code>p1 &lt; p2</code></td>
+				<td><code>p1.__lt__(p2)</code></td>
+			</tr><tr><td>Less than or equal to</td>
+				<td><code>p1 &lt;= p2</code></td>
+				<td><code>p1.__le__(p2)</code></td>
+			</tr><tr><td>Equal to</td>
+				<td><code>p1 == p2</code></td>
+				<td><code>p1.__eq__(p2)</code></td>
+			</tr><tr><td>Not equal to</td>
+				<td><code>p1 != p2</code></td>
+				<td><code>p1.__ne__(p2)</code></td>
+			</tr><tr><td>Greater than</td>
+				<td><code>p1 &gt; p2</code></td>
+				<td><code>p1.__gt__(p2)</code></td>
+			</tr><tr><td>Greater than or equal to</td>
+				<td><code>p1 &gt;= p2</code></td>
+				<td><code>p1.__ge__(p2)</code></td>
+			</tr></tbody></table>
+
