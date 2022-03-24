@@ -47,3 +47,37 @@ c2=child2()
 print(c2.data1)
 print(c2.data3)
 
+#Hybrid Inheritance
+class Parent:
+    data1="parent1"
+    def func1(self):
+        print("This is a parent 1 class")
+
+class child1(Parent):
+    data2="child1"
+    def func2(self):
+        print("This is a child 1 class")
+
+class child2(Parent):
+    data3="child2"
+    def func3(self):
+        print("This is a child 2 class")
+        
+class hybridChild(child1,child2):
+    data4="child2"
+    def func4(self):
+        print("This is a child 2 class")      
+
+#object of child class
+c1=child1()
+print(c1.data1)
+print(c1.data2)
+c2=child2()
+print(c2.data1)
+print(c2.data3)
+
+hc=hybridChild()
+print(hc.data1)
+print(hc.data2)
+print(hc.data3)
+print(hc.data4)
