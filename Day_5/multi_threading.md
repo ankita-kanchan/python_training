@@ -57,4 +57,47 @@ thread.start_new_thread(function_name, arguments)
 
 This module is the high-level implementation of threading in python and the de facto standard for managing multithreaded applications. It provides a wide range of features when compared to the thread module.
 <img src="https://www.guru99.com/images/1/080219_0505_Multithread3.png" alt="" class="lazyloaded" data-ll-status="loaded" width="950" height="534">
-
+<table class="table table-striped">
+<tbody>
+<tr>
+<th>Function Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><strong>activeCount()</strong></td>
+<td>Returns the count of <strong>Thread</strong> objects which are still alive</td>
+</tr>
+<tr>
+<td><strong>currentThread()</strong></td>
+<td>Returns the current object of the Thread class.</td>
+</tr>
+<tr>
+<td><strong>enumerate()</strong></td>
+<td>Lists all active Thread objects.</td>
+</tr>
+<tr>
+<td><strong>isDaemon()</strong></td>
+<td>Returns true if the thread is a daemon.</td>
+</tr>
+<tr>
+<td><strong>isAlive()</strong></td>
+<td>Returns true if the thread is still alive.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Thread Class methods</strong></td>
+</tr>
+<tr>
+<td><strong>start()</strong></td>
+<td>Starts the activity of a thread. It must be called only once for each thread because it will throw a runtime error if called multiple times.</td>
+</tr>
+<tr>
+<td><strong>run()</strong></td>
+<td>This method denotes the activity of a thread and can be overridden by a class that extends the Thread class.</td>
+</tr>
+<tr>
+<td><strong>join()</strong></td>
+<td>It blocks the execution of other code until the thread on which the join() method was called gets terminated.</td>
+</tr>
+</tbody>
+</table>
