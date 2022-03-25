@@ -101,3 +101,40 @@ This module is the high-level implementation of threading in python and the de f
 </tr>
 </tbody>
 </table>
+
+
+<h3>Deadlocks and Race conditions</h3>
+
+Before learning about deadlocks and race conditions, it’ll be helpful to understand a few basic definitions related to concurrent programming:
+
+    Critical SectionIt is a fragment of code that accesses or modifies shared variables and must be performed as an atomic transaction.
+    Context SwitchIt is the process that a CPU follows to store the state of a thread before changing from one task to another so that it can be resumed from the same point later.
+
+<h3>Deadlocks</h3>
+
+Deadlocks are the most feared issue that developers face when writing concurrent/multithreaded applications in python. The best way to understand deadlocks is by using the classic computer science example problem known as the Dining Philosophers Problem.
+
+The problem statement for dining philosophers is as follows:
+
+Five philosophers are seated on a round table with five plates of spaghetti (a type of pasta) and five forks, as shown in the diagram.
+<img src="https://www.guru99.com/images/1/080219_0505_Multithread6.png" alt="" class="lazyloaded" data-ll-status="loaded" width="450" height="398">
+
+At any given time, a philosopher must either be eating or thinking.
+
+Moreover, a philosopher must take the two forks adjacent to him (i.e., the left and right forks) before he can eat the spaghetti. The problem of deadlock occurs when all five philosophers pick up their right forks simultaneously.
+
+Since each of the philosophers has one fork, they will all wait for the others to put their fork down. As a result, none of them will be able to eat spaghetti.
+
+Similarly, in a concurrent system, a deadlock occurs when different threads or processes (philosophers) try to acquire the shared system resources (forks) at the same time. As a result, none of the processes get a chance to execute as they are waiting for another resource held by some other process.
+Race Conditions
+
+A race condition is an unwanted state of a program which occurs when a system performs two or more operations simultaneously. For example, consider this simple for loop:
+
+i=0; # a global variable
+for x in range(100):
+    print(i)
+    i+=1;
+
+If you create n number of threads which run this code at once, you cannot determine the value of i (which is shared by the threads) when the program finishes execution. This is because in a real multithreading environment, the threads can overlap, and the value of i which was retrieved and modified by a thread can change in between when some other thread accesses it.
+
+These are the two main classes of problems that can occur in a multithreaded or distributed python application. In the next section, you will learn how to overcome this problem by synchronizing threads.
