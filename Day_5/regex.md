@@ -289,16 +289,8 @@ result = re.match(pattern, test_string)
     
     
     
-    <style>
-    #div-gpt-ad-Programizcom37046 {display:none; width: 728px; height: 90px; }
-    #div-gpt-ad-Programizcom36796 {display: block;}
-    @media(min-width: 992px) { #div-gpt-ad-Programizcom37046 {display: block;} #div-gpt-ad-Programizcom36796 {display: none;}}
-    </style><div class="pgAdWrapper" style="min-width: 728px; min-height: 90px; display: flex; justify-content: center; align-items: center;"><div id="div-gpt-ad-Programizcom37046" style="margin: 32px 0;">
-    <div></div></div><div class="adSpinner" style="width: 60px; height: 60px; text-align: center; line-height: 60px; margin: 10px auto; font-size: 12px; position: absolute; display: none;"><span style="color: rgb(243, 243, 243);">Ad</span></div></div>
-    
-    <div id="div-gpt-ad-Programizcom36796" style="margin: 32px 0; min-height: 250px;">
-    </div>
-    </div><div class="clearfix"></div><p><code>\A</code> - Matches if the specified characters are at the start of a string.</p>
+   
+</div><div class="clearfix"></div><p><code>\A</code> - Matches if the specified characters are at the start of a string.</p>
 
 <div class="table-responsive"><table cellspacing="1" cellpadding="1" border="0"><thead><tr><th scope="col">Expression</th>
 			<th scope="col">String</th>
