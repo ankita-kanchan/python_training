@@ -30,40 +30,15 @@
     
     
     
-    <style>#carbonads{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Helvetica,Arial,sans-serif;--width:728px;--font-size:22px}#carbonads{display:block;overflow:hidden;max-width:var(--width);position:relative;background-color:#fcfcfc;border:solid 1px #eee;font-size:var(--font-size);box-sizing:border-box;margin:0}.detail #carbonads{margin-top:12px}#carbonads a{color:inherit;text-decoration:none}#carbonads a:hover{color:inherit}.carbon-wrap{display:flex;align-items:center}carbon-img{display:block;float:left;margin:0;max-width:var(--width);line-height:1}.carbon-img img{display:block;margin:0;width:auto}.carbon-text{display:block;float:left;padding:0 1em;line-height:1.35;max-width:calc(100% - 130px - 2em);text-align:left}.carbon-poweredby{display:block;position:absolute;bottom:0;right:0;padding:6px 10px;background:repeating-linear-gradient(-45deg,transparent,transparent 5px,hsla(0,0%,0%,.025) 5px,hsla(0,0%,0%,.025) 10px) hsla(203,11%,95%,.8);text-align:center;text-transform:uppercase;letter-spacing:.5px;font-weight:600;font-size:8px;border-top-left-radius:4px;line-height:1}@media only screen and (min-width:320px) and (max-width:759px){.carbon-text{font-size:14px}}</style><div id="carbon-block"><script src="//cdn.carbonads.com/carbon.js?serve=CKYDL27L&amp;placement=wwwprogramizcom" id="_carbonads_js"></script></div>
-    
-    
-    
-    
-    <style>
-    #div-gpt-ad-Programizcom36791 {display: none; }
-    #div-gpt-ad-Programizcom39106 {display: block;}
-    /* .pgAdWrapper { display: block !important; } */
-    @media(min-width: 992px) { #div-gpt-ad-Programizcom36791 {display: block;} #div-gpt-ad-Programizcom39106 {display: none;}}
-    </style><div class="pgAdWrapper" style="min-width: 728px; min-height: 90px; display: flex; justify-content: center; align-items: center;"><div id="div-gpt-ad-Programizcom36791" class="content-top-ad" style="min-height: 1px;">
-    <div></div><iframe id="google_ads_iframe_/8095840,68410703/.2_A.36791.3_Programiz.com_tier1_1" srcdoc="<body></body>" style="position: absolute; z-index: -1; border: 0px none;"></iframe></div><div class="adSpinner" style="width: 60px; height: 60px; text-align: center; line-height: 60px; margin: 10px auto; font-size: 12px; position: absolute; display: none;"><span style="color: rgb(243, 243, 243);">Ad</span></div></div>
-    
-<div id="div-gpt-ad-Programizcom39106" class="content-top-ad" style="height: 100px; margin-bottom: 24px; "></div>
-
-                
-            <div class="editor-contents">
                               <h1>Python RegEx</h1>
               
               
                               <p class="editor-contents__short-description">In this tutorial, you will learn about regular expressions (RegEx), and use Python's re module to work with RegEx (with the help of examples).</p>
               
-              
-              
-                                
-    
-    
-    
-    <div id="node-1495" class="node node-python clearfix" about="/python-programming/regex" typeof="sioc:Item foaf:Document">
-
-  
+        
       <span property="dc:title" content="Python RegEx" class="rdf-meta element-hidden"></span>
   
-  <div class="content">
+  
       <p id="introduction">A <strong>Reg</strong>ular <strong>Ex</strong>pression (RegEx) is a sequence of characters that defines a search pattern. For example,</p>
 
 <pre style="max-height: 600px;"><code class="python hljs">^a...s$</code></pre>
