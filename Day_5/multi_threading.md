@@ -126,15 +126,27 @@ Moreover, a philosopher must take the two forks adjacent to him (i.e., the left 
 Since each of the philosophers has one fork, they will all wait for the others to put their fork down. As a result, none of them will be able to eat spaghetti.
 
 Similarly, in a concurrent system, a deadlock occurs when different threads or processes (philosophers) try to acquire the shared system resources (forks) at the same time. As a result, none of the processes get a chance to execute as they are waiting for another resource held by some other process.
-Race Conditions
+
+<h3>Race Conditions</h3>
 
 A race condition is an unwanted state of a program which occurs when a system performs two or more operations simultaneously. For example, consider this simple for loop:
 
-i=0; # a global variable
-for x in range(100):
-    print(i)
-    i+=1;
+    i=0; # a global variable
+    for x in range(100):
+        print(i)
+        i+=1;
 
 If you create n number of threads which run this code at once, you cannot determine the value of i (which is shared by the threads) when the program finishes execution. This is because in a real multithreading environment, the threads can overlap, and the value of i which was retrieved and modified by a thread can change in between when some other thread accesses it.
 
 These are the two main classes of problems that can occur in a multithreaded or distributed python application. In the next section, you will learn how to overcome this problem by synchronizing threads.
+
+
+<h3>Synchronizing threads</h3>
+
+To deal with race conditions, deadlocks, and other thread-based issues, the threading module provides the Lock object. The idea is that when a thread wants access to a specific resource, it acquires a lock for that resource. Once a thread locks a particular resource, no other thread can access it until the lock is released. As a result, the changes to the resource will be atomic, and race conditions will be averted.
+
+A lock is a low-level synchronization primitive implemented by the __thread module. At any given time, a lock can be in one of 2 states: locked or unlocked. It supports two methods:
+
+    acquire()When the lock-state is unlocked, calling the acquire() method will change the state to locked and return. However, If the state is locked, the call to acquire() is blocked until the release() method is called by some other thread.
+    release()The release() method is used to set the state to unlocked, i.e., to release a lock. It can be called by any thread, not necessarily the one that acquired the lock.
+
