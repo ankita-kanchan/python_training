@@ -52,3 +52,9 @@ The Thread Module
 The syntax to create a new thread using this module is as follows:
 
 thread.start_new_thread(function_name, arguments)
+
+<h3>The Threading Module</h3>
+
+This module is the high-level implementation of threading in python and the de facto standard for managing multithreaded applications. It provides a wide range of features when compared to the thread module.
+<img src="https://www.guru99.com/images/1/080219_0505_Multithread3.png" alt="" class="lazyloaded" data-ll-status="loaded" width="950" height="534">
+
