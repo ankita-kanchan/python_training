@@ -1,8 +1,8 @@
 #Mini Mysql application
 1.Login #email and password #user 
-    1.Add Item
+    1.Add Item 
     2.Remove item
-    3.Display items
+    3.Display items 
     4.Update item
 2.Register
 #validate data using regex
@@ -18,3 +18,4 @@
 ##title
 ##descr
 ##created
+
