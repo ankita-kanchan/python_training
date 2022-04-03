@@ -1,0 +1,12 @@
+django-admin startproject firstapp
+python manage.py runserver
+python manage.py startapp home
+make urls.py in app home
+
+STATICFILES_DIRS=[
+    os.path.join(BASE_DIR,'static')
+]
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
