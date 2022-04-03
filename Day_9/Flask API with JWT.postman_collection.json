@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "6eba6239-d750-4281-b2f0-ddbe13e71346",
+		"name": "Flask API with JWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Demo User",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "demouser@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "contact",
+							"value": "1234567891",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Mumbai",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Demo@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "demouser@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Demo@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Users",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{token}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/user",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddItem",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "item 1",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "this is a demo item",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/add_item",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"add_item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Items",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:5000 ",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiIwODQzMzFhMi1lOTJlLTRkMzktYThmMS0yNjVhYTAzNWRjMTUiLCJleHAiOjE2NDg3MzE4MDV9.owiOHXZjVALwP6_UYlBvIsIPx1XFiiO4KASTG9VexpE",
+			"type": "string"
+		}
+	]
+}
