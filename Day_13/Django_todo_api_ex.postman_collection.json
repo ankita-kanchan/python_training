@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "826d00a5-0431-428c-95ad-8b12116549a1",
+		"name": "Django_todo_api_ex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Todo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Do the Filtering\",\r\n    \"description\":\"Complete all modules Assignment\",\r\n    \"created\":\"2022-04-06\",\r\n    \"status\":\"pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}api/todo/create/",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"todo",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Todo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}api/todo/",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"todo",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Todo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Learn Python Django Framework\",\r\n    \"status\":\"complete\",\r\n    \"created\":\"2022-04-05\",\r\n    \"description\": \"Complete all modules of Django Framework\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}api/todo/update/1/",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"todo",
+						"update",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}api/todo/delete/2/",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"todo",
+						"delete",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page Number Pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}api/todo/?page=1",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"todo",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Limit Offset Pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}api/todo/?limit=2&offset=3",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"todo",
+						""
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "offset",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter using Status and Date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}api/todo/?status=pending&created=2022-04-06",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"todo",
+						""
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending"
+						},
+						{
+							"key": "created",
+							"value": "2022-04-06"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Filter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}api/todo/?search=learn",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"todo",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "learn"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ordering Filter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}api/todo/?ordering=created",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"todo",
+						""
+					],
+					"query": [
+						{
+							"key": "ordering",
+							"value": "created"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/",
+			"type": "string"
+		}
+	]
+}
